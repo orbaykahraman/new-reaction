@@ -1,0 +1,30 @@
+<div class="reaction-container">
+  <!-- Emoji butonları -->
+  <div class="emoji-buttons">
+    <button mat-icon-button *ngFor="let emoji of emojis"
+            (click)="react(emoji)"
+            matTooltip="{{emoji}} tepkisi gönder ({{getEmojiIndex(emoji)}})">
+      <span class="emoji">{{emoji}}</span>
+    </button>
+  </div>
+
+  <!-- Yağan emojiler -->
+  <div *ngFor="let item of activeEmojis"
+       class="falling-emoji"
+       [@emojiRain]="{
+         value: '',
+         params: {
+           duration: item.duration,
+           rotation: item.rotation
+         }
+       }"
+       [style.left]="item.left"
+       [style.font-size]="item.size">
+    {{item.emoji}}
+  </div>
+
+  <!-- Tepki mesajı -->
+  <div *ngIf="showMessage" class="reaction-message" @messageAnimation>
+    {{currentMessage}}
+  </div>
+</div>

@@ -1,0 +1,96 @@
+.reaction-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.emoji-buttons {
+  display: flex;
+  gap: 8px;
+  background: white;
+  padding: 8px;
+  border-radius: 24px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.emoji-buttons .emoji {
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.emoji-buttons .emoji:hover {
+  transform: scale(1.2);
+}
+
+.falling-emoji {
+  position: fixed;
+  top: -50px;
+  z-index: 999;
+  pointer-events: none;
+  user-select: none;
+  will-change: transform;
+}
+.reaction-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+
+.emoji-buttons .emoji {
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.emoji-buttons .emoji:hover {
+  transform: scale(1.2);
+}
+
+.falling-emoji {
+  position: fixed;
+  top: -50px;
+  z-index: 999;
+  pointer-events: none;
+  user-select: none;
+  will-change: transform;
+}
+
+.reaction-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ff00cc, #3333ff, #00ffea); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  z-index: 1001;
+  text-align: center;
+  padding: 20px 40px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.reaction-message[data-emoji="😊"] {
+  color: #FFD700;
+}
+
+.reaction-message[data-emoji="👍"] {
+  color: #4CAF50;
+}
+
+.reaction-message[data-emoji="👎"] {
+  color: #F44336;
+}
+
+.reaction-message[data-emoji="💯"] {
+  color: #FF5722;
+}
+
+.reaction-message[data-emoji="❤️"] {
+  color: #E91E63;
+}

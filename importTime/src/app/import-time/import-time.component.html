@@ -1,0 +1,11 @@
+
+<button mat-raised-button color="primary" (click)="fileInput.click()">
+  Belge Yükle
+</button>
+<input
+  hidden
+  type="file"
+  #fileInput
+  (change)="onFileSelected($event)"
+  accept=".pdf,.txt"
+>

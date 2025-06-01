@@ -61,7 +61,7 @@ export class ReactionComponent {
     size: string
   }[] = [];
 
-  // Emoji mesaj eşleşmeleri
+
   emojiMessages: { [key: string]: string } = {
     '😊': 'HAHAHA',
     '👍': 'OK',
@@ -78,10 +78,10 @@ export class ReactionComponent {
   }
 
   react(emoji: string) {
-    // Mesajı göster
+
     this.showReactionMessage(emoji);
 
-    // 50 adet emoji oluştur
+
     for (let i = 0; i < 100; i++) {
       const left = `${Math.random() * 100}%`;
       const duration = `${3 + Math.random() * 2}s`;
@@ -96,7 +96,7 @@ export class ReactionComponent {
         size
       });
 
-      // Animasyon bittikten sonra kaldır
+
       setTimeout(() => {
         this.activeEmojis = this.activeEmojis.filter(item => item.left !== left);
       }, 5000);
@@ -107,7 +107,7 @@ export class ReactionComponent {
     this.currentMessage = this.emojiMessages[emoji];
     this.showMessage = true;
 
-    // 3 saniye sonra mesajı gizle
+
     setTimeout(() => {
       this.showMessage = false;
     }, 3000);

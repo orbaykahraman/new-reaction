@@ -1,0 +1,8 @@
+<div *ngIf="data.type === 'text/plain'" class="text-container">
+  <pre>{{ data.content }}</pre>
+</div>
+
+<iframe *ngIf="data.type === 'application/pdf'" [src]="safePdfUrl"
+  width="100%"
+  height="100%">
+</iframe>

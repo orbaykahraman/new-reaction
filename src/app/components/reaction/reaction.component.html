@@ -1,5 +1,4 @@
 <div class="reaction-container">
-  <!-- Emoji butonları -->
   <div class="emoji-buttons">
     <button mat-icon-button *ngFor="let emoji of emojis"
             (click)="react(emoji)"
@@ -8,7 +7,6 @@
     </button>
   </div>
 
-  <!-- Yağan emojiler -->
   <div *ngFor="let item of activeEmojis"
        class="falling-emoji"
        [@emojiRain]="{
@@ -23,7 +21,6 @@
     {{item.emoji}}
   </div>
 
-  <!-- Tepki mesajı -->
   <div *ngIf="showMessage" class="reaction-message" @messageAnimation>
     {{currentMessage}}
   </div>
